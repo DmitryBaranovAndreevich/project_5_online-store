@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon {
+  position: relative;
+  border: none;
+  background: #FFF;
+  cursor: pointer;
+}
+
+.count {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  font: 14px/17px sans-serif;
+  color: #fff;
+  border-radius: 50%;
+  background: #ffc85e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -20px;
+  right: -5px;
+}
+
+.wrapper {
+}
+
+.name {
+  font: 12px/18px sans-serif;
+  color: #111;
+  font-weight: 600;
+  margin: 0;
+}
+
+.price {
+  font: 14px/21px sans-serif;
+  color: #3f4e65;
+  margin: 0;
+}

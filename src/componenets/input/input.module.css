@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 263px;
+  width: 100%;
+}
+
+.input {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  width: 100%;
+  font: 12px/18px sans-serif;
+  padding: 20px;
+  background: #ededed;
+  border-radius: 36px;
+}
+
+.icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: #ffc85e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  top: 10px;
+  margin-left: -50px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.icon:hover {
+  opacity: 0.6;
+}
