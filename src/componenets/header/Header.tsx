@@ -11,7 +11,7 @@ import Cart from '../cart/Cart';
 const Header = () => {
   return (
     <header className={styles.container}>
-      <Logo />
+      <Logo color={'#000'}/>
       <Button text={'Каталог'} size={ButtonSize.big} icon={squaresIcon} />
       <Input />
       <div className={styles.contacts}>
