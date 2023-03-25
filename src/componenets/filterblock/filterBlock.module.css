@@ -1,0 +1,54 @@
+.container {
+  max-width: 215px;
+  width: 100%;
+  text-align: start;
+}
+
+.title {
+  font: 16px/24px sans-serif;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+.showButton {
+  padding: 21px 41px;
+  border-radius: 79px;
+  background: #ffc85e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.showButton:hover,
+.deleteButton:hover {
+  opacity: 0.6;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 40px;
+}
+
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  background: #ffc85e;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: url('../../assets/deleteIcon.png') no-repeat center/cover;
+}

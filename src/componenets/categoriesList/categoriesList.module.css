@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  list-style-type: none;
+  gap: 45px;
+}
+
+.element {
+  max-width: 62px;
+  font: 14px/16px sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.element:hover {
+  opacity: .6;
+}

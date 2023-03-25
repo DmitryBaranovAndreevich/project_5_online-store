@@ -8,7 +8,8 @@ export const products = [
     size: '25X25',
     brand: 'Herbel',
     manufacturer: 'Нэфис',
-    category: ['body care'],
+    category: ['Уход за телом'],
+    subCategory: ['Эпиляция и депиляция'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -21,7 +22,8 @@ export const products = [
     size: '45X35',
     brand: 'Herbel',
     manufacturer: 'Нэфис',
-    category: ['body care'],
+    category: ['Уход за телом'],
+    subCategory: ['Средства для ванны и душа'],
     images:
       'https://img.freepik.com/free-photo/close-up-shot-of-body-cream-with-plain-background_23-2148241854.jpg?size=338&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -34,7 +36,8 @@ export const products = [
     size: '35X35',
     brand: 'GARNIAR',
     manufacturer: 'Нэфис',
-    category: ['body care'],
+    category: ['Уход за телом'],
+    subCategory: ['Скрабы, пилинги и пр.'],
     images:
       'https://img.freepik.com/free-photo/close-up-body-butter-recipient_23-2148543026.jpg?size=338&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -47,7 +50,8 @@ export const products = [
     size: '45X35',
     brand: 'GARNIAR',
     manufacturer: 'Нэфис',
-    category: ['body-care', 'facial-care'],
+    category: ['Уход за телом', 'Уход за руками'],
+    subCategory: ['Скрабы, пилинги и пр.', 'Крем для рук'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -60,7 +64,8 @@ export const products = [
     size: '62X35',
     brand: 'Herbel',
     manufacturer: 'Нэфис',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Увлажнение и питание'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -73,7 +78,8 @@ export const products = [
     size: '54X35',
     brand: 'Herbel',
     manufacturer: 'Нэфис',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Средства для ногтей'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -86,7 +92,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'BASF',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Мыло твердое'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -99,7 +106,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'BASF',
-    category: ['body-care', 'facial-care'],
+    category: ['Уход за телом', 'Уход за руками'],
+    subCategory: ['Мыло жидкое', 'Гели для душа'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -112,7 +120,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'Henkel',
-    category: ['body-care', 'facial-care'],
+    category: ['Уход за телом', 'Уход за руками'],
+    subCategory: ['Мыло жидкое', 'Гели для душа'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -125,7 +134,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'Henkel',
-    category: ['body-care', 'facial-care'],
+    category: ['Уход за телом', 'Уход за руками'],
+    subCategory: ['Мыло жидкое', 'Гели для душа'],
     images:
       'https://img.freepik.com/free-photo/close-up-of-a-young-woman-hands-holding-jar-of-cream_171337-12781.jpg?w=900&t=st=1679635605~exp=1679636205~hmac=9dca2f52726613b362e754d341d318d3db49358c483ab30dc0a6b751bb7f713d',
   },
@@ -138,7 +148,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'Henkel',
-    category: ['body-care', 'facial-care'],
+    category: ['Уход за телом', 'Уход за руками'],
+    subCategory: ['Мыло жидкое', 'Гели для душа'],
     images:
       'https://img.freepik.com/free-photo/close-up-hands-holding-cream-container_23-2148660814.jpg?size=626&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -151,7 +162,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'Henkel',
-    category: ['body-care'],
+    category: ['Уход за телом'],
+    subCategory: ['Дезодоранты, антиперспиранты'],
     images:
       'https://img.freepik.com/premium-photo/clear-liquid-gel-smear-isolated-on-white_279659-129.jpg?size=626&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -164,7 +176,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'Henkel',
-    category: ['body-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Жидкость для снятия лака'],
     images:
       'https://img.freepik.com/free-photo/young-woman-with-cosmetic-cream-on-a-clean-fresh-face-skin-care-concept_186202-7646.jpg?size=338&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -177,7 +190,8 @@ export const products = [
     size: '45X35',
     brand: 'Carbina',
     manufacturer: 'Henkel',
-    category: ['body-care'],
+    category: ['Уход за телом'],
+    subCategory: ['Эпиляция и депиляция'],
     images:
       'https://img.freepik.com/free-photo/top-view-salts-and-cream-container_23-2148899419.jpg?size=626&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -190,7 +204,8 @@ export const products = [
     size: '45X35',
     brand: 'Desruct',
     manufacturer: 'AOS',
-    category: ['body-care'],
+    category: ['Уход за телом'],
+    subCategory: ['Средства для ванны и душа'],
     images:
       'https://img.freepik.com/free-photo/top-view-body-butter-recipient_23-2148542976.jpg?size=338&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -203,7 +218,8 @@ export const products = [
     size: '45X35',
     brand: 'Desruct',
     manufacturer: 'AOS',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Увлажнение и питание'],
     images:
       'https://img.freepik.com/free-photo/top-view-cream-container-with-plant_23-2148899432.jpg?size=338&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -216,7 +232,8 @@ export const products = [
     size: '45X35',
     brand: 'Desruct',
     manufacturer: 'AOS',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Средства для ногтей'],
     images:
       'https://img.freepik.com/free-photo/swirl-made-of-glossy-wet-paint_23-2147746804.jpg?size=338&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -229,7 +246,8 @@ export const products = [
     size: '45X35',
     brand: 'Desruct',
     manufacturer: 'AOS',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Мыло твердое'],
     images:
       'https://img.freepik.com/free-photo/top-view-of-body-butter-cream-on-plain-background_23-2148241841.jpg?size=338&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -242,7 +260,8 @@ export const products = [
     size: '45X35',
     brand: 'Desruct',
     manufacturer: 'AOS',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Мыло жидкое'],
     images:
       'https://img.freepik.com/free-photo/front-view-skin-oil-droppers-and-face-cream-recipients-composition_23-2148761454.jpg?size=626&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
@@ -255,8 +274,11 @@ export const products = [
     size: '45X35',
     brand: 'Desruct',
     manufacturer: 'AOS',
-    category: ['facial-care'],
+    category: ['Уход за руками'],
+    subCategory: ['Крем для рук'],
     images:
       'https://img.freepik.com/premium-photo/pattern-cosmetic-smears-cream-texture-on-pastel-background_779599-43.jpg?size=626&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
 ];
+
+export type TGood = (typeof products)[1];

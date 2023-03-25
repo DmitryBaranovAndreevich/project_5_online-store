@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  gap: 5px;
+  align-items: first baseline;
+  margin-top: 5px;
+}
+
+.container:first-of-type {
+  margin-top: 25px;
+}
+
+.label {
+  cursor: pointer;
+}
+
+.count {
+  font: 10px/15px sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
