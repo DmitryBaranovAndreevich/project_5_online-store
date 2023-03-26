@@ -38,3 +38,13 @@
 .button_smallsize {
   max-width: 153px;
 }
+
+.button_goodItemsize {
+  padding: 16px 25px;
+  font: 12px/15px sans-serif;
+  max-height: 45px;
+}
+
+.button_goodItemsize:after {
+  width: 20px;
+}

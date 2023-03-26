@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import CategoriesList from '../../componenets/categoriesList/CategoriesList';
 import Filterblock from '../../componenets/filterblock/Filterblock';
+import GoodCard from '../../componenets/goodCard/GoodCard';
 import SortSelect from '../../componenets/sortSelect/sortSelect';
+import { useAppDispath, useAppSelector } from '../../hooks/redux';
+import { TGood } from '../../service/goods';
+import { goodsSlice } from '../../store/reducers/GoodsSlice';
 import styles from './main.module.css';
 
 const options = [
@@ -11,6 +16,12 @@ const options = [
 ];
 
 const Main = () => {
+  const { filterState } = useAppSelector((state) => state.goodsReduser);
+  const { getState } = goodsSlice.actions;
+  const dispatch = useAppDispath();
+  useEffect(() => {
+    dispatch(getState());
+  }, []);
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
@@ -18,8 +29,13 @@ const Main = () => {
         <SortSelect label={'Сортировка:'} options={options} />
       </div>
       <CategoriesList list={['Уход за телом', 'Уход за руками']} />
-      <div>
+      <div className={styles.main}>
         <Filterblock />
+        <div className={styles.wrapper}>
+          {filterState.map((el: TGood) => (
+            <GoodCard {...el} key={el.id} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import styles from './button.module.css';
 
 interface IButton {
   text: string;
-  size: 'big' | 'middle' | 'small';
+  size: 'big' | 'middle' | 'small'| 'goodItem';
   icon: string;
 }
 

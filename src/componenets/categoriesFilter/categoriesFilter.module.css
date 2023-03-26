@@ -1,4 +1,22 @@
 .title {
   font: 16px/24px sans-serif;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.title:hover {
+  opacity: 0.6;
+}
+
+.button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  font: 13px/21px sans-serif;
+}
+
+.active {
+  color: #ffc85e;
 }

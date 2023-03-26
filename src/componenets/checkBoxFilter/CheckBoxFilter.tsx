@@ -1,4 +1,8 @@
-import { FC } from 'react';
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
+import { FC, FormEvent, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useAppDispath } from '../../hooks/redux';
+import { goodsSlice } from '../../store/reducers/GoodsSlice';
 import CheckBox from '../checkBox/CheckBox';
 import Input from '../input/Input';
 import styles from './checkBoxFilter.module.css';
@@ -6,16 +10,25 @@ import styles from './checkBoxFilter.module.css';
 interface ICheckBoxFilter {
   name: string;
   options: Array<{ text: string; count: number }>;
+  paramName: 'brand' | 'manufacturer';
 }
 
-const CheckBoxFilter: FC<ICheckBoxFilter> = ({ name, options }) => {
+const CheckBoxFilter: FC<ICheckBoxFilter> = ({ name, options, paramName }) => {
+  const [state, setState] = useState<Array<string>>([]);
+  const dispatch = useAppDispath();
+  const { setParam, sort } = goodsSlice.actions;
+  useEffect(() => {
+    dispatch(setParam({ param: paramName, value: state }));
+    dispatch(sort());
+  }, [state]);
+
   return (
     <div className={styles.container}>
       <p className={styles.title}>{name}</p>
       <Input />
       <div className={styles.wrapper}>
         {options.map((el) => (
-          <CheckBox key={el.text} {...el} />
+          <CheckBox key={el.text} {...el} setState={setState} state={state} />
         ))}
       </div>
     </div>

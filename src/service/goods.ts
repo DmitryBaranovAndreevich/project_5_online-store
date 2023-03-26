@@ -196,7 +196,7 @@ export const products = [
       'https://img.freepik.com/free-photo/top-view-salts-and-cream-container_23-2148899419.jpg?size=626&ext=jpg&ga=GA1.1.1366509938.1676702465&semt=ais',
   },
   {
-    id: 4604049097561,
+    id: 4604049097591,
     title: 'Экстракт крапивы',
     description: 'Воостанавливает клетки',
     price: 48.76,

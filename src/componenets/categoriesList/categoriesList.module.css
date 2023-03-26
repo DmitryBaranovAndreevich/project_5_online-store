@@ -15,3 +15,7 @@
 .element:hover {
   opacity: .6;
 }
+
+.active {
+  color: #FFC85E
+}
