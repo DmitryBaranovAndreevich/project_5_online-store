@@ -2,10 +2,13 @@ import { TGood } from '../../service/goods';
 import Button from '../button/Button';
 import cartIcon from '../../assets/cartIconWhite.png';
 import styles from './goodCard.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const GoodCard = ({ images, volume, title, id, manufacturer, brand, price }: TGood) => {
+  const navigate = useNavigate();
+  const navigateTo = () => navigate(`/goods/${id}`)
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={navigateTo}>
       <img src={images} alt="Good" className={styles.image} />
       <p className={styles.volume}>{volume}</p>
       <p className={styles.title}>{title}</p>

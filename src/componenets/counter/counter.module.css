@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  max-width: 110px;
+  width: 100%;
+  gap: 17px;
+  align-items: center;
+}
+
+.button {
+  box-sizing: border-box;
+  display: block;
+  width: 34px;
+  height: 23px;
+  background: #FFC6504D;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: .5;
+}

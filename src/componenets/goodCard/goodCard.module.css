@@ -8,6 +8,7 @@
   align-items: flex-start;
   gap: 5px;
   box-shadow: 0 14px 39px -11px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
 }
 
 .image {
