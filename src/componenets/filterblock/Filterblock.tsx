@@ -11,7 +11,7 @@ import PriceRange from '../priceRange/PriceRange';
 import styles from './filterBlock.module.css';
 
 const goods = JSON.parse(localStorage.getItem('products') as string) as Array<TGood>;
-const blocks = getAllBlock(goods);
+const blocks = getAllBlock(goods || []);
 
 export const DeleteButton = ({ onClick }: { onClick: () => void }) => {
   return <button className={styles.deleteButton} type="button" onClick={onClick}></button>;
