@@ -1,5 +1,5 @@
 .button {
-  --iconUrl: url();
+  --iconUrl: url('../../assets/buttonIcon1.svg');
   max-height: 60px;
   font: 14px/17px sans-serif;
   font-weight: 700;
@@ -10,14 +10,14 @@
   border: none;
   background-color: #ffc85e;
   border-radius: 79px;
-  color: #FFF;
+  color: #fff;
   gap: 12px;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .button:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .button:after {
