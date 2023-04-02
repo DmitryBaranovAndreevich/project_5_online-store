@@ -1,6 +1,6 @@
 import { TGood } from './goods';
 
-function getAllBlock(goods: Array<TGood>) {
+function getAllBlock(goods: Array<TGood>): Array<string> {
   return goods
     .map(({ category }) => category)
     .reduce((priv, el) => {

@@ -2,6 +2,7 @@ import { useAppDispath } from '../../hooks/redux';
 import getAllBlock from '../../service/getAllBlocks';
 import getAllCategoriesInBlock from '../../service/getAllCategoriesInBlock';
 import getAllManufacturers from '../../service/getAllManufacturers';
+import { TGood } from '../../service/goods';
 import { goodsSlice } from '../../store/reducers/GoodsSlice';
 import CategoriesFilter from '../categoriesFilter/CategoriesFilter';
 import CheckBoxFilter from '../checkBoxFilter/CheckBoxFilter';
@@ -9,7 +10,7 @@ import Line from '../line/Line';
 import PriceRange from '../priceRange/PriceRange';
 import styles from './filterBlock.module.css';
 
-const goods = JSON.parse(localStorage.getItem('products') as string);
+const goods = JSON.parse(localStorage.getItem('products') as string) as Array<TGood>;
 const blocks = getAllBlock(goods);
 
 export const DeleteButton = ({ onClick }: { onClick: () => void }) => {
