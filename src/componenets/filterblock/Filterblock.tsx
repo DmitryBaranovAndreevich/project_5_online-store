@@ -1,4 +1,4 @@
-import { useAppDispath } from '../../hooks/redux';
+import { useAppDispath, useAppSelector } from '../../hooks/redux';
 import getAllBlock from '../../service/getAllBlocks';
 import getAllCategoriesInBlock from '../../service/getAllCategoriesInBlock';
 import getAllManufacturers from '../../service/getAllManufacturers';
@@ -10,14 +10,13 @@ import Line from '../line/Line';
 import PriceRange from '../priceRange/PriceRange';
 import styles from './filterBlock.module.css';
 
-const goods = JSON.parse(localStorage.getItem('products') as string) as Array<TGood>;
-const blocks = getAllBlock(goods || []);
-
 export const DeleteButton = ({ onClick }: { onClick: () => void }) => {
   return <button className={styles.deleteButton} type="button" onClick={onClick}></button>;
 };
 
 const Filterblock = () => {
+  const { goods } = useAppSelector((state) => state.goodsReduser);
+  const blocks = getAllBlock(goods);
   const dispatch = useAppDispath();
   const { resetState } = goodsSlice.actions;
   const resetForm = () => dispatch(resetState());

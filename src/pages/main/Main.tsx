@@ -17,7 +17,7 @@ const options = [
 ];
 
 const Main = () => {
-  const { filterState } = useAppSelector((state) => state.goodsReduser);
+  const { filterState, goods } = useAppSelector((state) => state.goodsReduser);
   const { getState } = goodsSlice.actions;
   const { addGood } = cartSlice.actions;
   const dispatch = useAppDispath();
@@ -36,7 +36,7 @@ const Main = () => {
       </div>
       <CategoriesList list={['Уход за телом', 'Уход за руками']} />
       <div className={styles.main}>
-        <Filterblock />
+        {goods.length&&<Filterblock />}
         <div className={styles.wrapper}>
           {filterState.map((el: TGood) => (
             <GoodCard {...el} key={el.id} handleClick={handleClick} />
