@@ -1,1 +1,1 @@
-Деплой доступен по ссылке: 
+Деплой доступен по ссылке:  https://visionary-pudding-23b0e6.netlify.app
