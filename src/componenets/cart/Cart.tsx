@@ -1,8 +1,21 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './cart.module.css';
+import { useAppSelector } from '../../hooks/redux';
+import { TGood } from '../../service/goods';
 
 const Cart = () => {
+  const { items } = useAppSelector((state) => state.cartReduser);
+  const { goods } = useAppSelector((state) => state.goodsReduser);
+  const navigate = useNavigate();
+  const navigateTo = () => navigate('/cart');
+  const sum = items
+    .reduce((priv, el) => {
+      const elem = goods.find(({ id }) => id === el.id) as TGood;
+      return priv + elem.price * el.count;
+    }, 0)
+    .toFixed(2);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={navigateTo}>
       <button className={styles.icon}>
         <svg
           width="41"
@@ -16,11 +29,11 @@ const Cart = () => {
             fill="#3F4E65"
           />
         </svg>
-        <p className={styles.count}>3</p>
+        <p className={styles.count}>{items.length}</p>
       </button>
       <div className={styles.wrapper}>
         <p className={styles.name}>Корзина</p>
-        <p className={styles.price}>12 478 ₸</p>
+        <p className={styles.price}>{sum} ₸</p>
       </div>
     </div>
   );

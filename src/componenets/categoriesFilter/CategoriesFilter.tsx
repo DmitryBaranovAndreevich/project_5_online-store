@@ -1,4 +1,4 @@
-import { FC, FormEvent, useState } from 'react';
+import { FC, FormEvent } from 'react';
 import { useAppDispath, useAppSelector } from '../../hooks/redux';
 import { goodsSlice } from '../../store/reducers/GoodsSlice';
 import styles from './categoriesFilter.module.css';

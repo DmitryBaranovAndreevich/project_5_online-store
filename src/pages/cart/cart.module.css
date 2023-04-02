@@ -1,0 +1,16 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 0 100px;
+}
+
+.title {
+  font: 40px/48px sans-serif;
+  text-align: start;
+  color: #111111;
+}
+
+.message {
+  font: 16px/18px sans-serif;
+  font-weight: 700;
+}

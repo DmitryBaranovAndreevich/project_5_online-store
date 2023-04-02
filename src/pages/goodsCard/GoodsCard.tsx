@@ -7,17 +7,52 @@ import cartIcon from '../../assets/cartIconWhite.png';
 import { goodsSlice } from '../../store/reducers/GoodsSlice';
 import { useEffect, useState } from 'react';
 import Counter from '../../componenets/counter/Counter';
+import { Volume } from '../../componenets/goodCard/GoodCard';
+import { cartSlice } from '../../store/reducers/CartSlice';
+
+export const Paragraf = ({ title, text }: { title: string; text: string }) => {
+  return (
+    <p className={styles.brand}>
+      {title}: <span className={styles.span}>{text}</span>
+    </p>
+  );
+};
+
+export const Describe = ({ text }: { text: string }) => {
+  return <p className={styles.id}>{text}</p>;
+};
+
+export const Price = ({ price }: { price: number }) => {
+  return <p className={styles.price}>{price} ₸</p>;
+};
+
+export const Title = ({ title }: { title: string }) => {
+  return <p className={styles.title}>{title}</p>;
+};
 
 const GoodsCard = () => {
+  const { items } = useAppSelector((state) => state.cartReduser);
   const { getState } = goodsSlice.actions;
+  const { addGood, changeCount } = cartSlice.actions;
   const dispatch = useAppDispath();
   useEffect(() => {
     dispatch(getState());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const { goods } = useAppSelector((state) => state.goodsReduser);
   const { id } = useParams();
-  const [count, setCount] = useState(1);
   const good = goods.find((el) => String(el.id) === id) as IGood;
+  const isInCart = items.find((elem) => elem.id === Number(id));
+  const [count, setCount] = useState(isInCart ? isInCart.count : 1);
+  const handleClick = () => {
+    dispatch(addGood({ id: Number(id), count }));
+  };
+
+  useEffect(() => {
+    isInCart && dispatch(changeCount({ id: Number(id), count }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [count]);
+
   return (
     <div className={styles.container}>
       {good && (
@@ -25,12 +60,21 @@ const GoodsCard = () => {
           <img src={good.images} alt="Foto" className={styles.image} />
           <div className={styles.about}>
             <p className={styles.status}>В наличие</p>
-            <p className={styles.title}>{good.title}</p>
-            <p className={styles.volume}>{good.volume}</p>
+            <Title title={good.title} />
+            <Volume volume={good.volume} />
             <div className={styles.wrapper2}>
-              <p className={styles.price}>{good.price} ₸</p>
+              <Price price={good.price} />
               <Counter count={count} setCount={setCount} />
-              <Button text={'В КОРЗИНУ'} size={'goodItem'} icon={cartIcon} />
+              {isInCart ? (
+                <p className={styles.message}>&#9989; Уже добавлено в корзину</p>
+              ) : (
+                <Button
+                  text={'В КОРЗИНУ'}
+                  size={'goodItem'}
+                  icon={cartIcon}
+                  onClick={handleClick}
+                />
+              )}
             </div>
             <div className={styles.wrapper2}>
               <button className={styles.shareButton}></button>
@@ -39,43 +83,21 @@ const GoodsCard = () => {
               </p>
               <button className={styles.priceTable}>Прайс-лист</button>
             </div>
-            <p className={styles.manufacturer}>
-              Производитель: <span className={styles.span}>{good.manufacturer}</span>
-            </p>
-            <p className={styles.brand}>
-              Бренд: <span className={styles.span}>{good.brand}</span>
-            </p>
-            <p className={styles.id}>
-              Артикул: <span className={styles.span}>{id}</span>
-            </p>
-            <p className={styles.id}>
-              Штрихкод: <span className={styles.span}>{id}</span>
-            </p>
+            <Paragraf text={good.manufacturer} title={'Производитель'} />
+            <Paragraf text={good.brand} title={'Бренд'} />
+            <Paragraf text={String(id)} title={'Артикул'} />
+            <Paragraf text={String(id)} title={'Штрихкод'} />
             <span className={`${styles.span} ${styles.margin}`}>Описание</span>
-            <p className={styles.id}>{good.description}</p>
+            <Describe text={good.description} />
             <div className={styles.borderBottom}></div>
             <span className={`${styles.span} ${styles.margin}`}>Характеристики</span>
-            <p className={styles.brand}>
-              Назначение: <span className={styles.span}>{good.subCategory}</span>
-            </p>
-            <p className={styles.brand}>
-              Тип: <span className={styles.span}>{good.category}</span>
-            </p>
-            <p className={styles.brand}>
-              Производитель: <span className={styles.span}>{good.manufacturer}</span>
-            </p>
-            <p className={styles.brand}>
-              Бренд: <span className={styles.span}>{good.brand}</span>
-            </p>
-            <p className={styles.brand}>
-              Артикул: <span className={styles.span}>{good.id}</span>
-            </p>
-            <p className={styles.brand}>
-              Штрихкод: <span className={styles.span}>{good.id}</span>
-            </p>
-            <p className={styles.brand}>
-              Обьем: <span className={styles.span}>{good.volume}</span>
-            </p>
+            <Paragraf text={good.subCategory.join(' ')} title={'Назначение'} />
+            <Paragraf text={good.category.join(' ')} title={'Тип'} />
+            <Paragraf text={good.manufacturer} title={'Производитель'} />
+            <Paragraf text={good.brand} title={'Бренд'} />
+            <Paragraf text={String(good.id)} title={'Артикул'} />
+            <Paragraf text={String(good.id)} title={'Штрихкод'} />
+            <Paragraf text={String(good.volume)} title={'Обьем'} />
           </div>
         </div>
       )}

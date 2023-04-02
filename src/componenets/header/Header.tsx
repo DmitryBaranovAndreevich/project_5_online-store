@@ -11,8 +11,8 @@ import Cart from '../cart/Cart';
 const Header = () => {
   return (
     <header className={styles.container}>
-      <Logo color={'#000'}/>
-      <Button text={'Каталог'} size={ButtonSize.big} icon={squaresIcon} />
+      <Logo color={'#000'} />
+      <Button text={'Каталог'} size={ButtonSize.big} icon={squaresIcon} onClick={() => {}} />
       <Input />
       <div className={styles.contacts}>
         <div className={styles.info}>
@@ -22,7 +22,7 @@ const Header = () => {
         </div>
         <img src={womenImg} alt="Women" className={styles.image} />
       </div>
-      <Button text={'Прайс-лист'} size={ButtonSize.big} icon={loadIcon} />
+      <Button text={'Прайс-лист'} size={ButtonSize.big} icon={loadIcon} onClick={() => {}} />
       <Cart />
     </header>
   );

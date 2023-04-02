@@ -1,6 +1,4 @@
-import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
-import { FC, FormEvent, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { FC, useEffect, useState } from 'react';
 import { useAppDispath } from '../../hooks/redux';
 import { goodsSlice } from '../../store/reducers/GoodsSlice';
 import CheckBox from '../checkBox/CheckBox';
@@ -20,6 +18,7 @@ const CheckBoxFilter: FC<ICheckBoxFilter> = ({ name, options, paramName }) => {
   useEffect(() => {
     dispatch(setParam({ param: paramName, value: state }));
     dispatch(sort());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
   return (

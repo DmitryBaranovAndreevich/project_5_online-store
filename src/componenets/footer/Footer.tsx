@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
       <div className={styles.wrapper}>
         <p className={styles.bigText}>Категории:</p>
-        <Button text={'Прайс-лист'} size={ButtonSize.big} icon={loadIcon} />
+        <Button text={'Прайс-лист'} size={ButtonSize.big} icon={loadIcon} onClick={() => {}} />
         <p className={styles.text}>Связь в мессенджерах:</p>
         <div className={styles.linkContainer}>
           <p className={styles.link}>

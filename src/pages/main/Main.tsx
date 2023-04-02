@@ -7,6 +7,7 @@ import { useAppDispath, useAppSelector } from '../../hooks/redux';
 import { TGood } from '../../service/goods';
 import { goodsSlice } from '../../store/reducers/GoodsSlice';
 import styles from './main.module.css';
+import { cartSlice } from '../../store/reducers/CartSlice';
 
 const options = [
   { value: 1, text: 'По возрастанию цены' },
@@ -18,10 +19,15 @@ const options = [
 const Main = () => {
   const { filterState } = useAppSelector((state) => state.goodsReduser);
   const { getState } = goodsSlice.actions;
+  const { addGood } = cartSlice.actions;
   const dispatch = useAppDispath();
   useEffect(() => {
     dispatch(getState());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleClick = ({ id, count }: { id: number; count: number }) =>
+    dispatch(addGood({ id, count }));
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
@@ -33,7 +39,7 @@ const Main = () => {
         <Filterblock />
         <div className={styles.wrapper}>
           {filterState.map((el: TGood) => (
-            <GoodCard {...el} key={el.id} />
+            <GoodCard {...el} key={el.id} handleClick={handleClick} />
           ))}
         </div>
       </div>

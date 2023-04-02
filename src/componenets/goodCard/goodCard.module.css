@@ -40,7 +40,7 @@
 .title {
   font: 16px/21px sans-serif;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 20px;
 }
 
 .id {
@@ -67,11 +67,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
 }
 
 .price {
   flex-shrink: 0;
-  font:16px/21px sans-serif;
+  font: 16px/21px sans-serif;
   font-weight: 800;
 }

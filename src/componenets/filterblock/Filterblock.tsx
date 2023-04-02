@@ -12,6 +12,10 @@ import styles from './filterBlock.module.css';
 const goods = JSON.parse(localStorage.getItem('products') as string);
 const blocks = getAllBlock(goods);
 
+export const DeleteButton = ({ onClick }: { onClick: () => void }) => {
+  return <button className={styles.deleteButton} type="button" onClick={onClick}></button>;
+};
+
 const Filterblock = () => {
   const dispatch = useAppDispath();
   const { resetState } = goodsSlice.actions;
@@ -35,7 +39,7 @@ const Filterblock = () => {
         <button className={styles.showButton} type="button">
           Показать
         </button>
-        <button className={styles.deleteButton} type="button" onClick={resetForm}></button>
+        <DeleteButton onClick={resetForm} />
       </div>
       {blocks.map((el) => (
         <div key={el}>
