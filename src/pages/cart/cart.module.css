@@ -14,3 +14,32 @@
   font: 16px/18px sans-serif;
   font-weight: 700;
 }
+
+.bottomContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.submitButton {
+  padding: 21px 38px;
+  border: none;
+  color: #ffffff;
+  border-radius: 79px;
+  background: #ffc85e;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submitButton:hover {
+  opacity: 0.6;
+}
+
+.messageToSend {
+  max-width: 400px;
+  margin: 0 auto;
+  font: 24px/36px sans-serif;
+  font-weight: 600;
+  padding: 23px 50px;
+  background: lightgreen;
+}
