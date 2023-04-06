@@ -15,10 +15,15 @@ export const DeleteButton = ({ onClick }: { onClick: () => void }) => {
 
 const Filterblock = () => {
   const { goods } = useAppSelector((state) => state.goodsReduser);
+
   const blocks = getAllBlock(goods);
+
   const dispatch = useAppDispath();
+
   const { resetState } = goodsSlice.actions;
+
   const resetForm = () => dispatch(resetState());
+
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>ПОДБОР ПО ПАРАМЕТРАМ</h3>

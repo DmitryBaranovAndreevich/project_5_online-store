@@ -13,8 +13,11 @@ interface ICheckBoxFilter {
 
 const CheckBoxFilter: FC<ICheckBoxFilter> = ({ name, options, paramName }) => {
   const [state, setState] = useState<Array<string>>([]);
+
   const dispatch = useAppDispath();
+
   const { setParam, sort } = goodsSlice.actions;
+
   useEffect(() => {
     dispatch(setParam({ param: paramName, value: state }));
     dispatch(sort());

@@ -13,9 +13,11 @@ const Header = () => {
   const isDesktop = useMediaQuery({
     query: '(min-width: 1400px)',
   });
+
   const isTablet = useMediaQuery({
     query: '(min-width: 650px)',
   });
+
   return (
     <header>
       <div className={styles.container}>

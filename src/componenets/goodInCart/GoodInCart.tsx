@@ -14,8 +14,11 @@ interface IGoodInCart extends TGood {
 
 const GoodInCart = ({ images, volume, title, description, price, id, count }: IGoodInCart) => {
   const { removeGood, changeCount } = cartSlice.actions;
+
   const dispatch = useAppDispath();
+
   const [countGoods, setCountGoods] = useState(count);
+
   const handleClick = () => {
     dispatch(removeGood(id));
   };
@@ -24,6 +27,7 @@ const GoodInCart = ({ images, volume, title, description, price, id, count }: IG
     dispatch(changeCount({ id, count: countGoods }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [countGoods]);
+  
   return (
     <div className={styles.container}>
       <div className={styles.box}>

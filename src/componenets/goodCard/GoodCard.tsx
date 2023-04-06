@@ -24,7 +24,9 @@ const GoodCard = ({
   handleClick,
 }: IGoodCard) => {
   const navigate = useNavigate();
+
   const navigateTo = () => navigate(`/goods/${id}`);
+  
   return (
     <div className={styles.container}>
       <img src={images} alt="Good" className={styles.image} onClick={navigateTo} />

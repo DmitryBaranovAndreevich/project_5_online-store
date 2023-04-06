@@ -6,9 +6,13 @@ import styles from './priceRange.module.css';
 
 const PriceRange: FC<IPriceRange> = ({ name, min, max }) => {
   const inputLeftRef = useRef(null);
+
   const inputRightRef = useRef(null);
+
   const { setReset } = useAppSelector((state) => state.goodsReduser);
+
   const { setPriceParams, sort } = goodsSlice.actions;
+
   const dispatch = useAppDispath();
 
   useEffect(() => {

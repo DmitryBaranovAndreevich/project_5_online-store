@@ -7,13 +7,16 @@ const Cart = () => {
   const { items } = useAppSelector((state) => state.cartReduser);
   const { goods } = useAppSelector((state) => state.goodsReduser);
   const navigate = useNavigate();
+
   const navigateTo = () => navigate('/cart');
+
   const sum = items
     .reduce((priv, el) => {
       const elem = goods.find(({ id }) => id === el.id) as TGood;
       return priv + elem.price * el.count;
     }, 0)
     .toFixed(2);
+
   return (
     <div className={styles.container} onClick={navigateTo}>
       <button className={styles.icon}>

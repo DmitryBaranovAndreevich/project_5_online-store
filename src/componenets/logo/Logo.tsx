@@ -3,7 +3,9 @@ import styles from './logo.module.css';
 
 const Logo = ({ color }: { color: string }) => {
   const navigate = useNavigate();
+
   const navigateTo = () => navigate('/');
+  
   return (
     <div className={styles.logo} onClick={navigateTo}>
       <svg

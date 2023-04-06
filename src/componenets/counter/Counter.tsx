@@ -14,6 +14,7 @@ const Counter: FC<ICounter> = ({ count, setCount }) => {
   const clickPlus = () => {
     setCount(++count);
   };
+
   return (
     <div className={styles.container}>
       <button className={styles.button} type={'button'} onClick={clickMinus}>

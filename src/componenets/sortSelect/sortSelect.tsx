@@ -6,6 +6,7 @@ import styles from './sortSelect.module.css';
 
 const SortSelect: FC<ISortSelect> = ({ label, options }) => {
   const { setSelect, sort } = goodsSlice.actions;
+  
   const dispatch = useAppDispath();
 
   const htmlFor = `${label}-${Math.random()}`;

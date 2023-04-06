@@ -25,6 +25,7 @@ const CategoriesFilter: FC<ICategoriesFilter> = ({ text, options }) => {
     dispatch(setSubCategory(el.textContent as string));
     dispatch(sort());
   };
+
   return (
     <div className={styles.container}>
       <p className={styles.title} onClick={handleClickToCategory}>
